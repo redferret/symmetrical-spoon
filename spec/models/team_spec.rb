@@ -25,9 +25,9 @@ RSpec.describe Team, type: :model do
         team_3.players << FactoryBot.create(:player, team: team_3, age: 18)
         team_3.players << FactoryBot.create(:player, team: team_3, age: 19)
 
-        teams = Team.sorted_teams_by_player_age.map(&:id)
+        teams = Team.sorted_teams_by_player_age
 
-        expected_result = [team_2.id, team_3.id, team_1.id]
+        expected_result = [team_2, team_3, team_1]
 
         expect(teams).to eq expected_result
       end
