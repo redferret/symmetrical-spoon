@@ -7,7 +7,7 @@ RSpec.describe Competition, type: :model do
 
   describe 'instance method,' do
     describe '#average_player_age' do
-      it 'returns the average players in the competition' do
+      it 'returns the average players age in the competition' do
         comp_1 = FactoryBot.create(:competition)
 
         team_1 = FactoryBot.create(:team)
